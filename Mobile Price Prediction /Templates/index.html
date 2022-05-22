@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Prediction</title>
+</head>
+<body>
+
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Get Mobile Price Now!!</h2>
+            <h3>Battery Power(mAh)</h3><br><input id="second" name="battery_power" required="required">
+            <h3>Internal Memory</h3><br><input id="fourth" name="int_memory" required="required">
+            <h3>Mobile Depth</h3><br><input id="fifth" name="m_dep" required="required">
+            <h3>Mobile Weight</h3><br><input id="sixth" name="mobile_wt" required="required">
+            <h3>Number Of Cores</h3><br><input id="seventh" name="n_cores" required="required">
+            <h3>Primary Camera</h3><br><input id='eight' name = "pc" required = "required">
+            <h3>Front Camera</h3><br><input id='eight' name = "fc" required = "required">
+            <h3>Pixel Height(Resolution)</h3><br><input id='ninth' name = "px_height" required = "required">
+            <h3>Pixel Width(Resolution)</h3><br><input id="tenth" name = "px_width" required = "required">
+            <h3>Screen Height</h3><br><input id='ninth' name = "sc_h" required = "required">
+            <h3>Screen Width</h3><br><input id="tenth" name = "sc_w" required = "required">
+            <h3>Talk Time</h3><br><input id='ninth' name = "talk_time" required = "required">
+            <h3>Ram</h3><br><input id='eight' name = "ram" required = "required">
+            <h3>Clock Speed</h3><br><input id='eight' name = "clock_speed" required = "required">
+            
+            <h3>Bluetooth</h3><br><select name="blue" id="eleventh" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <h3>Dual Sim</h3><br><select name="dual_sim" id="eleventh" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <h3>3G</h3><br><select name="three_g" id="3G" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <h3>4G</h3><br><select name="four_g" id="4G" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <h3>WiFi</h3><br><select name="wifi" id="resea" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <h3>Touch Screen</h3><br><select name="touch_screen" id="research" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            
+            <br>
+         </form>
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+    </style>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+         <h1>Made By Gautam Dhall</h1>
+    <h4>0-Cheap</h4>
+    <h4>1-Affordable</h4>
+    <h4>2-Expensive</h4>
+    <h4>3-Highly Expensive</h4>
+</body>
+
+</html>
